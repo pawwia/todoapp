@@ -1,0 +1,11 @@
+.importantTask{
+color:red;
+font-weight: bold;
+font-size: larger;
+}
+.notImportantTask{
+font-size:medium;
+color: black;
+
+
+}
