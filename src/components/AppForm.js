@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const AppForm = () => {
+const AppForm = (props) => {
    
     const [whatToDo,setWhatToDo]=useState('');
     const [finishDate,setFinishDate]=useState();
@@ -13,15 +13,21 @@ const dday=(d.getDate())<10?"0"+parseInt(d.getDate()):parseInt(d.getDate());
 const dateMin=String(dYear+'-'+dmonth+'-'+dday)
 const dateMax=String(dYear+1+'-'+dmonth+'-'+dday)
 
-console.log(dateMax);
 
 
 const handleSubmit=e=>{
-e.preventDefault();    
+e.preventDefault();  
+props.add(whatToDo,finishDate,isImportant);
+setIsImportant(false);
+setFinishDate(dateMin);
+console.log(whatToDo)
+
+setWhatToDo('')
+
 }
     return ( 
         <form onSubmit={handleSubmit}>
-<label htmlFor="finishDate">Do kiedy?</label><input type="date" min={dateMin} max={dateMax}id="finishDate"  value={finishDate} onChange={e=>setFinishDate(e.target.value)} /><br/>
+<label htmlFor="finishDate">Do kiedy?</label><input type="date" min={dateMin} max={dateMax}id="finishDate"  value={dateMin} onChange={e=>setFinishDate(e.target.value)} /><br/>
 <label htmlFor="whatToDo">Zadanie?</label><input type="text" id="whatToDo" value={whatToDo} onChange={e=>setWhatToDo(e.target.value)}/><br/>
 <label htmlFor="isImportnat">Czy bardzo ważne?</label><input type="checkbox" checked={isImportant} onChange={e=>!setIsImportant(e.target.checked)} id="isImportant"/>
 <input type="submit" value="Dodaj zadanie"/>
