@@ -7,7 +7,7 @@ function App() {
   const [data,setData]=useState([
 {
 id:1,
-title:"Iść do kibla",
+title:"Zjeść śniadanie",
 added: Date("31 december 2022"),
 deadLine: Date("18 april 2022"),
 isImportant: false,
@@ -15,7 +15,7 @@ done:false,
 },
 {
   id:2,
-  title:"Zrobić kupę",
+  title:"Obejrzeć serial",
   added:  Date("2 february 2022"),
   deadLine: Date("18 april 2022"),
   isImportant: false,
