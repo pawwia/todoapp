@@ -11,6 +11,7 @@ padding:15px;
 font-size: 4vh;
 color:rgb(255, 229, 229);
 margin-top:19px;
+border-radius: 10px;
 
 }
 .FormAppClass input:focus{

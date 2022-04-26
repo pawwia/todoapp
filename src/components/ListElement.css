@@ -41,7 +41,10 @@
 }
 .ListToDo li:hover{
     background-color: #8ac6d4;
-    color:#080c0d
+    color:#080c0d;
+    transition-duration: 1s;
+
+
 
 }
 .ListToDo{
