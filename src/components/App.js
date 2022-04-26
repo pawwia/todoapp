@@ -46,6 +46,9 @@ const newElement= {
   task.push(newElement)
   setData(task)
 }
+
+
+
 const setDone=(id)=>{
 const task=Array.from(data) ;
 
@@ -62,13 +65,13 @@ setData(task);
 const deleteListElement=(id)=>{
 const task=Array.from(data);
 
-task.map(element=>{
+task.forEach(element=>{
   if(element.id===id){
 const ino=element.indexOf;
 task.splice(ino,1);
 
   }
-})
+});
 
 
   setData(task)
@@ -79,9 +82,9 @@ task.splice(ino,1);
       <h1>To Do App</h1>
       <AppForm add={addElement}/>
       <h2>Niezrobione zadania</h2>
-      <List data={data} delete={deleteListElement} setDone={setDone} tasksActive={false}/>
+      <List key={1}data={data} delete={deleteListElement} setDone={setDone} tasksActive={false}/>
       <h3>Zrobione zadania</h3>
-      <List data={data} delete={deleteListElement} setDone={setDone} tasksActive={true}/>
+      <List key={2} data={data} delete={deleteListElement} setDone={setDone} tasksActive={true}/>
 
   </div>
   );

@@ -7,7 +7,7 @@ let {id,title,addDate,deadline,done,active, isImportant}=props;
 
  
     return ( 
-       done===active ?(<li className={isImportant?"importantTask":"notImportantTask"}>
+       done===active ?(<li className={ isImportant?"importantTask":"notImportantTask"}>
             Zadanie {id},<br/><b> {title}</b><br/>
            <i> zrób to do: {deadline.getFullYear()}-{deadline.getMonth()}-{deadline.getDate()}<br/></i>
            <i> Dodano: {addDate.getFullYear()}-{addDate.getMonth()}-{addDate.getDate()}<br/></i>

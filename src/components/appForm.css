@@ -1,0 +1,19 @@
+.errorValidation{
+    color:red;
+    font-weight: bold;
+    display:block;
+    margin-top:0;
+    margin-bottom: 0;
+}
+.FormAppClass input{
+background-color: rgb(82, 82, 82);
+padding:15px;
+font-size: 4vh;
+color:rgb(255, 229, 229);
+margin-top:19px;
+
+}
+.FormAppClass input:focus{
+    border: 3px solid red;
+    color:red
+}
